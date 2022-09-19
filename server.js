@@ -48,11 +48,11 @@ const port = process.env.PORT || 9000;
 app.db = router.db;
 
 app.use(middlewares);
-server.use(
-    jsonServer.rewriter({
-      '/api/*': '/$1',
-    })
-  );
+// server.use(
+//     jsonServer.rewriter({
+//       '/api/*': '/$1',
+//     })
+//   );
 const rules = auth.rewriter({
     users: 640,
     conversations: 660,
